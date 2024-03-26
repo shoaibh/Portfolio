@@ -11,7 +11,7 @@ export default function About() {
   return (
     <motion.section
       ref={ref}
-      className="relative text-white mt-16 mb-16 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
+      className="relative text-white mt-10 mb-10 max-w-[45rem] text-center leading-8 sm:mb-10 scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
@@ -21,8 +21,7 @@ export default function About() {
       <div className="mb-3">
         Graduated from{" "}
         <span className="font-medium">
-          Ambedkar Institute of Advanced Communication, Technologies and
-          Research
+        Netaji Subhas University of Technology, East Campus 
         </span>{" "}
         with a Bachelor of Technology degree in{" "}
         <span className="font-medium">Computer Science</span>. I started

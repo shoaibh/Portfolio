@@ -5,10 +5,6 @@ import * as THREE from 'three';
 
 const StarBackground: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  let mouseX = 0;
-  let mouseY = 0;
-  const windowHalfX = window?.innerWidth;
-  const windowHalfY = window?.innerHeight;
 
   useEffect(() => {
     let scene: THREE.Scene;
@@ -49,7 +45,6 @@ const StarBackground: React.FC = () => {
       container.appendChild(renderer.domElement);
 
       window.addEventListener('resize', onWindowResize, false);
-      document.addEventListener('mousemove', onMouseMove, false);
     };
 
     const animate = () => {
@@ -60,8 +55,8 @@ const StarBackground: React.FC = () => {
     const render = () => {
       if (!camera || !scene || !renderer) return;
 
-      camera.position.x += (mouseX - camera.position.x) * 0.0001;
-      camera.position.y += (-mouseY - camera.position.y) * 0.0001;
+      camera.position.x += 0.01;
+      camera.position.y -= 0.2;
       camera.lookAt(scene.position);
       renderer.render(scene, camera);
     };
@@ -112,18 +107,11 @@ const StarBackground: React.FC = () => {
       if (scene) scene.add(stars);
     };
     
-    
-    const onMouseMove = (e: MouseEvent) => {
-      mouseX = e.clientX - windowHalfX;
-      mouseY = e.clientY - windowHalfY;
-    };
-
     init();
     animate();
 
     return () => {
       window.removeEventListener('resize', onWindowResize);
-      document.removeEventListener('mousemove', onMouseMove);
     };
   }, []);
 
