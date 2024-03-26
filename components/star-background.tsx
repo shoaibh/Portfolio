@@ -58,8 +58,8 @@ const StarBackground: React.FC = () => {
       const renderer = rendererRef.current;
       if (!camera || !scene || !renderer) return;
 
-      camera.position.x += 0.01;
-      camera.position.y -= 0.2;
+      camera.position.x += 0.03;
+      camera.position.y -= 0.05;
       camera.lookAt(scene.position);
       renderer.render(scene, camera);
     };

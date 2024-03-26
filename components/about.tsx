@@ -38,11 +38,11 @@ export default function About() {
         <p>
           In my 4th year, I interned at BITCS, which turned into a full-time
           role. BITCS exposed me to various technologies like React.js, Node.js,
-          Postgres, Docker, and more. I've been with BITCS for over three years,
+          Postgres, Docker, and more. I have been with BITCS for over three years,
           learning and growing.
         </p>
         <p>
-          While I continue my journey with BITCS, I'm also open to new
+          While I continue my journey with BITCS, I am also open to new
           opportunities because I believe in ongoing personal and professional
           growth.
         </p>
