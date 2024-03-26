@@ -44,9 +44,9 @@ export default function Experience() {
               >
                 <h3 className="font-semibold capitalize">{item.title}</h3>
                 <p className="font-normal !mt-0">{item.location}</p>
-                <p className="!mt-1 !font-normal text-white/75">
+                <div className="!mt-1 !font-normal text-white/75">
 
-                  {Array.isArray(item.description) ? <ul className="list-disc ml-2">{item.description.map((desc, index) => <li key={index}>{desc}</li>)}</ul>: item.description} </p> </VerticalTimelineElement>
+                  {Array.isArray(item.description) ? <ul className="list-disc ml-2">{item.description.map((desc, index) => <li key={index}>{desc}</li>)}</ul>: item.description} </div> </VerticalTimelineElement>
             </React.Fragment>
           );
         })}
