@@ -4,6 +4,7 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import MusicRoom from "@/public/MusicRoom.png";
 import Streamify from "@/public/streamify.png";
+import Collab from "@/public/Collab.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
 
@@ -81,6 +82,15 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
+  {
+    title: "Collab.io",
+    description: `A place where colleagues can collab within a workspace through text messages, video calling, screen sharing, image sharing,
+                etc. 
+             `,
+    tags: ["NextJS 14", "Typescript", "Convex", "Livekit", "Shadcn", "Jotai", "Quill-Editor", "Nuqs", "socket.io", "tailwind"],
+    imageUrl: Collab,
+    url: "https://collab-io-nine.vercel.app/",
+  },
   {
     title: "Streamify",
     description: `A Data Dashboard for users to check which artist got the most streams in a period of time. User can analyse
